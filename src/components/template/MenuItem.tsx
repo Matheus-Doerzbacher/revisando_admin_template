@@ -12,7 +12,11 @@ export default function MenuItem({ url, texto, icone , onClick, className}: Menu
 
     function renderizarLink() {
         return (
-            <div className={`flex flex-col justify-center items-center h-16 w-full text-zinc-600 ${className}`}>
+            <div className={`
+                flex flex-col justify-center items-center h-16 w-full 
+                text-zinc-600 dark:text-zinc-200
+                ${className}
+            `}>
                 {icone}
                 <span className={`flex justify-center text-xs font-light  w-16`}>
                     {texto}
@@ -21,7 +25,10 @@ export default function MenuItem({ url, texto, icone , onClick, className}: Menu
         )
     }
     return (
-        <li onClick={onClick} className={`hover:bg-zinc-100 cursor-pointer `}>
+        <li onClick={onClick} className={`
+            hover:bg-zinc-100 dark:hover:bg-zinc-800
+            cursor-pointer 
+        `}>
             {url ? (
                 <Link href={url}>
                     {renderizarLink()}
