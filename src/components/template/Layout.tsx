@@ -1,3 +1,4 @@
+"use client"
 import useAppData from "@/data/hook/useAppData";
 import Cabecalho from "./Cabecalho";
 import Conteudo from "./Conteudo";
