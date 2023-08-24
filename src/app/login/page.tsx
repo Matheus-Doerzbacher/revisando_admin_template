@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import AuthInput from "@/components/Auth/AuthInput";
 import { IconGoogle } from "@/components/icons";
@@ -17,8 +18,14 @@ export default function Login() {
     }
 
     return (
-        <div className={` flex items-center justify-center h-screen`}>
-            <div className={`w-1/3`}>
+        <div className={` flex items-center justify-center h-screen w-full`}>
+            <div className="hidden md:block w-1/2">
+                <img 
+                    className={`h-screen w-full object-cover`}
+                    src="https://source.unsplash.com/random/?list" 
+                    alt="imagem"/>
+            </div>
+            <div className={`w-1/2 m-10`}>
                 <h1 className={`text-xl font-bold mb-5`}>
                     {modo === "login"
                         ? "Entre com a sua Conta"
